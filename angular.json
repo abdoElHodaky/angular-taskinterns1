@@ -12,7 +12,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "options": {}
+          "options": {
             "outputPath": "./build",
             "index": "src/index.html",
             "main": "src/main.ts",
