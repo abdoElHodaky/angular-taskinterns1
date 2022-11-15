@@ -32,17 +32,19 @@
 }
 
 .slider {
-  width: 100vw;
-  margin: 100px auto;
-  height: 50vh;
+  width: 100%;
+  margin: auto;
+  height: 50%;
+  position:relative 
 }
 
 .slick-slide {
   margin: 0px 20px;
 }
 
-.slick-slide img {
+.slick-slide di {
   width: 100%;
+  color:re
 }
 
 .slick-prev:before,
