@@ -1,4 +1,4 @@
-.carousel {
+/*.carousel {
   margin-bottom: 4rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,13 +9,13 @@
   width: 100%;
 }
 /* Since positioning the image, we need to help out the caption */
-.carousel-caption {
+/*.carousel-caption {
   bottom: 3rem;
   z-index: 10;
 }
 
 /* Declare heights because of positioning of img element */
-.carousel-item {
+/*.carousel-item {
   height: 32rem;
 }
 .carousel-item > img {
@@ -24,7 +24,7 @@
   height: 32rem;
   float: left;
 }
-
+*/
 ._navactive {
   color: white;
   background-color: var(--bs-cyan);
@@ -35,7 +35,7 @@
   width: 100%;
   margin: auto;
   height: 50%;
-  position:relative 
+  position: relative;
 }
 
 .slick-slide {
@@ -44,7 +44,7 @@
 
 .slick-slide di {
   width: 100%;
-  color:re
+  color: re;
 }
 
 .slick-prev:before,
