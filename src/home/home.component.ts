@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   title = 'CodeSandbox';
   slides = [
-    { img: 'https://via.placeholder.com/600.png/09f/fff' },
-    { img: 'https://via.placeholder.com/600.png/021/fff' },
-    { img: 'https://via.placeholder.com/600.png/321/fff' },
-    { img: 'https://via.placeholder.com/600.png/422/fff' },
-    { img: 'https://via.placeholder.com/600.png/654/fff' },
+    { img: 'https://via.placeholder.com/600.png/09f/fff', p: 'hello' },
+    { img: 'https://via.placeholder.com/600.png/021/fff', p: 'abdo' },
+    { img: 'https://via.placeholder.com/600.png/321/fff', p: 'moh' },
+    { img: 'https://via.placeholder.com/600.png/422/fff', p: 'arh' },
+    { img: 'https://via.placeholder.com/600.png/654/fff', p: 'bye' },
   ];
   slideConfig = {
     slidesToShow: 1,
@@ -21,7 +21,7 @@ export class HomeComponent {
     infinite: true,
   };
   addSlide() {
-    this.slides.push({ img: 'http://placehold.com/600.png/' });
+    this.slides.push({ img: 'http://placehold.com/600.png/', p: 'hello' });
   }
   removeSlide() {
     this.slides.length = this.slides.length - 1;

@@ -25,6 +25,10 @@
   float: left;
 }
 */
+#caroselsection {
+  margin-bottom: 5rem;
+  background-color: #efce;
+}
 ._navactive {
   color: white;
   background-color: var(--bs-cyan);
