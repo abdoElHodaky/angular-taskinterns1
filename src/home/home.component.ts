@@ -15,6 +15,7 @@ export class HomeComponent {
     { img: 'https://via.placeholder.com/600.png/654/fff', p: 'bye' },
   ];
   slideConfig = {
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
