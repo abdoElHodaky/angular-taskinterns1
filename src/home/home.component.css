@@ -64,3 +64,6 @@
 .slick-current {
   opacity: 1;
 }
+.slick-dots {
+  text-align: end;
+}
