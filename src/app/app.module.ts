@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from '../home/home.component';
 import { NewsComponent } from '../news/news.component';
 import { NewsDetailComponent } from '../newsdetail/newsdetail.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   imports: [
+    SlickCarouselModule,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
