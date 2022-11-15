@@ -19,6 +19,7 @@ export class HomeComponent {
     slidesToScroll: 1,
     dots: true,
     infinite: true,
+    rtl: true,
   };
   addSlide() {
     this.slides.push({ img: 'http://placehold.com/600.png/', p: 'hello' });
