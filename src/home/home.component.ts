@@ -15,6 +15,8 @@ export class HomeComponent {
     { img: 'https://via.placeholder.com/600.png/654/fff', p: 'bye' },
   ];
   slideConfig = {
+    adaptiveHeight: true,
+    mobileFirst: true,
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
