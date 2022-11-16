@@ -1,1 +1,14 @@
 /* Add application styles & imports to this file! */
+app-news .slick-dots li.slick-active button:before,
+app-news .slick-dots li button:before {
+  color: grey;
+  opacity: 1;
+  font-size: 16px;
+}
+app-news .slick-dots li.slick-active button {
+  border: 5px solid var(--bs-warning);
+  border-radius: 100%;
+}
+app-news .slick-dots li.slick-active button:before {
+  color: transparent;
+}
