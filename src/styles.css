@@ -1,4 +1,7 @@
 /* Add application styles & imports to this file! */
+.slick-dots button {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s;
+}
 app-news .slick-dots li.slick-active button:before,
 app-news .slick-dots li button:before {
   color: grey;
