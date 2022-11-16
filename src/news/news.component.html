@@ -121,4 +121,19 @@
   <button (click)="slickModal.unslick()">unslick</button-->
   </section>
 </div>
-s
+<style type="text/css">
+
+    .slick-dots li.slick-active button:before,
+  .slick-dots li button:before {
+    color: grey;
+    opacity: 1;
+    font-size: 16px;
+  }
+  .slick-dots li.slick-active button {
+    border: 5px solid var(--bs-warning);
+    border-radius: 100%;
+  }
+  .slick-dots li.slick-active button:before {
+    color: transparent;
+  }
+</style>
