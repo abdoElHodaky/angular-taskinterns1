@@ -121,18 +121,25 @@
   <button (click)="slickModal.unslick()">unslick</button-->
   </section>
 </div>
-<style>
-    .slick-dots li.slick-active button:before,
-  .slick-dots li button:before {
-    color: grey;
-    opacity: 1;
-    font-size: 16px;
-  }
-  .slick-dots li.slick-active button {
-    border: 5px solid #00ac9f;
-    border-radius: 100%;
-  }
-  .slick-dots li.slick-active button:before {
-    color: transparent;
-  }
-</style>
+<script type="text/javascript">
+      var style=`<style>
+        .slick-dots li.slick-active button:before,
+      .slick-dots li button:before {
+        color: grey;
+        opacity: 1;
+        font-size: 16px;
+      }
+      .slick-dots li.slick-active button {
+        border: 5px solid #00ac9f;
+        border-radius: 100%;
+      }
+      .slick-dots li.slick-active button:before {
+        color: transparent;
+      }
+    </style>
+   `;
+   setTimeout(function(){
+     $("app-news")[0].innerHTML+=style;
+   },5000)
+  >
+</script>
