@@ -1,27 +1,30 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { HomeComponent } from '../home/home.component';
-import { NewsComponent } from '../news/news.component';
-import { NewsDetailComponent } from '../newsdetail/newsdetail.component';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { AppComponent } from "./app.component";
+import { HomeComponent } from "../home/home.component";
+import { NewsComponent } from "../news/news.component";
+import { NewsDetailComponent } from "../newsdetail/newsdetail.component";
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-
 @NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NewsComponent,
+    NewsDetailComponent
+  ],
   imports: [
     SlickCarouselModule,
     BrowserModule,
-    FormsModule,
     RouterModule.forRoot([
-      { path: '', redirectTo: '/home', pathMatch: 'full' },
+      { path: "", redirectTo: "/home", pathMatch: "full" },
       {
-        path: 'home',
-        component: HomeComponent,
+        path: "home",
+        component: HomeComponent
       },
       {
-        path: 'news',
-        component: NewsComponent,
+        path: "news",
+        component: NewsComponent
         /*children: [
           {
             path: "anew",
@@ -30,15 +33,10 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
         ]*/
         //children: [{ path: "/", component: ANewComponent }]
       },
-      { path: 'news/:id', component: NewsDetailComponent },
-    ]),
+      { path: "news/:id", component: NewsDetailComponent }
+    ])
   ],
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    NewsComponent,
-    NewsDetailComponent,
-  ],
-  bootstrap: [AppComponent],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

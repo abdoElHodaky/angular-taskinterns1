@@ -1,11 +1,67 @@
-<div class="container">
-  <!--
-  <div class="row d-flex flex-row">
-    <div class="col-4 col-xs-6">
+<header>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light rounded bg-white" aria-label="Eleventh navbar example">
+      <div class="container-fluid">
+        <a class="navbar-brand col-5" href="#">
+        <img src="https://moe.gov.eg/wwwroot/images/logo.png" class="img-responsive">
+
+      </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarsExample09" style="">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">الصفحة الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/news">اخبار المنصه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+              التسجيل علي البوابه
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+              تعلم معنا
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+              نظام الامتحانات
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+              تقديم شكوي
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+              دعم فني
+             </a>
+          </li>
+            <!--li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown09">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li-->
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+<div class="container ">
+    <!--
+    <div class="col-4">
       <div class="card mx-auto" style="max-width: 18rem;">
         <img
           src="https://moe.gov.eg//media/poujpoin/whatsapp-image-2022-11-03-at-2-30-16-pm.jpeg?anchor=center&mode=crop&width=1560&height=528&rnd=133119532090370000"
-          class="Card-img-top"
+          class="card-img-top"
           alt=""
         />
         <div class="card-body">
@@ -18,15 +74,15 @@
             المجلس الأعلى للأمناء والآباء والمعلمين على مستوى الجمهورية؛ لمناقشة
             عدد من القضايا التعليمية المختلفة
           </p>
-          <p class="card-text">
+          <p class="card-text text-muted">
             <a class="link" href="news/1"
-              ><small class="justify">see detail</small></a
+              ><small class="justify-text-center">تفاصيل اكثر</small></a
             >
           </p>
         </div>
       </div>
     </div>
-    <div class="col-4 col-xs-6">
+    <div class="col-4">
       <div class="card mx-auto" style="max-width: 18rem;">
         <img
           src="https://moe.gov.eg//media/3phlr1ry/whatsapp-image-2022-11-03-at-2-22-31-pm.jpeg?anchor=center&mode=crop&width=1560&height=528&rnd=133119526847570000"
@@ -35,7 +91,9 @@
         />
 
         <div class="card-body">
-          <h6 class="card-title text-sm-start">بيان إعلامي</h6>
+          <h6 class="card-title text-sm-start">
+            بيان إعلامي
+          </h6>
           <p class="card-text text-sm-center">
             حرص الدكتور رضا حجازي وزير التربية والتعليم والتعليم الفني، على
             الاطمئنان على حالة الطالبة هنا أشرف محمد محمد شحاتة، الطالبة بمدرسة
@@ -43,13 +101,13 @@
           </p>
           <p class="card-text">
             <a class="link" href="news/2"
-              ><small class="justify">see detail</small></a
+              ><small class="justify-text-center">تفاصيل اكثر</small></a
             >
           </p>
         </div>
       </div>
     </div>
-    <div class="col-4 col-xs-6">
+    <div class="col-4">
       <div class="card mx" style="max-width: 18rem;">
         <img
           src="https://moe.gov.eg//media/qnnew5qr/whatsapp-image-2022-11-03-at-1-18-37-pm.jpeg?anchor=center&mode=crop&width=1560&height=528&rnd=133119484497800000"
@@ -69,71 +127,112 @@
           </p>
           <p class="card-text">
             <a class="link" href="news/3"
-              ><small class="justify">see detail</small></a
+              ><small class="justify-text-center">تفاصيل اكثر</small></a
             >
           </p>
         </div>
       </div>
     </div>
-  </div>
--->
-  <section id="caroselsection">
-    <ngx-slick-carousel
-      class="carousel"
-      #slickModal="slick-carousel"
-      [config]="slideConfig"
-      (init)="slickInit($event)"
-      (breakpoint)="breakpoint($event)"
-      (afterChange)="afterChange($event)"
-      (beforeChange)="beforeChange($event)"
-    >
-      <div
-        ngxSlickItem
-        *ngFor="let slide of slides; let i = index"
-        class="slide"
-      >
-        <div class="row">
-          <div class="col-4">
-            <img src="{{ slide.img }}" alt="" width="100%" />
-            <p class="text-start text-black mx-1">
-              {{ slide.p }}
-            </p>
-          </div>
-          <div class="col-4">
-            <img src="{{ slide.img }}" alt="" width="100%" />
-            <p class="text-start text-black mx-1">
-              {{ slide.p }}
-            </p>
-          </div>
-          <div class="col-4">
-            <img src="{{ slide.img }}" alt="" width="100%" />
-            <p class="text-start text-black mx-1">
-              {{ slide.p }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </ngx-slick-carousel>
+  -->
+  <div class="container-fluid">
     <!--
-  <button (click)="addSlide()">Add</button>
-  <button (click)="removeSlide()">Remove</button>
-  <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-  <button (click)="slickModal.unslick()">unslick</button-->
-  </section>
-</div>
-<style type="text/css">
+    <section class="row d-flex">
+      <div class="col-md-3 col-sm-6 flex-column">
+        <img claas="rounded-circle" src="../assets/image_bg.jpg" alt=""
+         width="200px"
+         height="200px">
+    
+        <h2>شرح طريقه التسجيل</h2>
+        <p>وصف طريقه التسجيل.</p>
+        <p><a class="btn btn-secondary" href="/news/1">عرض التفاصيل</a></p>
+      </div>
+    
+      <div class="col-md-3 col-sm-6 flex-column">
+        <img claas="rounded-circle" src="../assets/image_bg.jpg" alt=""
+         width="200px"
+         height="200px">
+        <h2>شرح طريقه التسجيل</h2>
+        <p>وصف طريقه التسجيل.</p>
+        <p><a class="btn btn-secondary" href="/news/2">عرض التفاصيل</a></p>
+      </div>
+    
+      <div class="col-md-3 col-sm-6 flex-column">
+        <img claas="rounded-circle" src="../assets/image_bg.jpg" alt=""
+         width="200px"
+         height="200px">
+        <h2>شرح طريقه التسجيل</h2>
+        <p>وصف طريقه التسجيل.</p>
+        <p><a class="btn btn-secondary" href="/news/3">عرض التفاصيل</a></p>
+      </div>
+      
+      <div class="col-md-3 col-sm-6 flex-column">
+        <img claas="rounded-circle" src="../assets/image_bg.jpg" alt=""
+         width="200px"
+         height="200px">
+        <h2>شرح طريقه التسجيل</h2>
+        <p>وصف طريقه التسجيل.</p>
+        <p><a class="btn btn-secondary" href="/news/4">عرض التفاصيل</a></p>
+      </div>
+      </section>
+    -->
 
-    .slick-dots li.slick-active button:before,
-  .slick-dots li button:before {
-    color: grey;
-    opacity: 1;
-    font-size: 16px;
-  }
-  .slick-dots li.slick-active button {
-    border: 5px solid var(--bs-warning);
-    border-radius: 100%;
-  }
-  .slick-dots li.slick-active button:before {
-    color: transparent;
-  }
-</style>
+    <section id="caroselsection">
+      <ngx-slick-carousel
+        style="background: transparent"
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="slideConfig"
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)"
+      >
+        <div
+          ngxSlickItem
+          *ngFor="let slide of slides; let i = index"
+          class="slide"
+        >
+        <div class="row d-flex">
+          <div class="col-sm-6 col-md-4 flex-column">
+            <img src="{{slide.img}}" alt="" width="250px" height="250px">
+            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i+1}}">
+              شرح طريقه التسجيل
+            </p>
+
+          </div>
+          <div class="col-sm-6 col-md-4 flex-column">
+            <img src="{{slide.img}}" alt="" width="250px" height="250px">
+            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i+1}}">
+              شرح طريقه التسجيل
+            </p>
+
+          </div>
+          <div class="col-sm-6 col-md-4 flex-column">
+            <img src="{{slide.img}}" alt="" width="250px" height="250px">
+            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i+1}}">
+              شرح طريقه التسجيل
+            </p>
+
+          </div>
+          
+          <!---->
+          <!--
+          <p class="text-start text-warning mx-1 mb-5" style="transform: translate(-10px,-230px); font-size: x-large;">
+            {{ slide.p }}
+          </p>
+        -->
+        </div>
+          
+        </div>
+      </ngx-slick-carousel>
+      <!--
+      <button (click)="addSlide()">Add</button>
+      <button (click)="removeSlide()">Remove</button>
+      <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+      <button (click)="slickModal.unslick()">unslick</button-->
+    </section>
+
+
+  </div>
+  
+</div>
