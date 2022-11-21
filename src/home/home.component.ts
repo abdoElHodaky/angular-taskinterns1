@@ -8,11 +8,11 @@ import { Component } from "@angular/core";
 export class HomeComponent {
   title = "CodeSandbox";
   slides = [
-    { img: '../assets/hugo-productive-work.png', p: 'hello' },
-    { img: '../assets/hugo-productive-work.png', p: 'abdo' },
-    { img: '../assets/hugo-productive-work.png', p: 'moh' },
-    { img: '../assets/hugo-productive-work.png', p: 'arh' },
-    { img: '../assets/hugo-productive-work.png', p: 'bye' },
+    { img: './src/assetss/hugo-productive-work.png', p: 'hello' },
+    { img: './src/assetss/hugo-productive-work.png', p: 'abdo' },
+    { img: './src/assetss/hugo-productive-work.png', p: 'moh' },
+    { img: './src/assets/hugo-productive-work.png', p: 'arh' },
+    { img: './src/assets/hugo-productive-work.png', p: 'bye' },
   ];
     slideConfig = {
       adaptiveHeight:true,
