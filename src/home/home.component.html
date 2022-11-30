@@ -202,7 +202,7 @@
       
       <section id="caroselsection">
         <ngx-slick-carousel
-          style="background: transparent"
+          style="background: transparent;"
           class="carousel"
           #slickModal="slick-carousel"
           [config]="slideConfig"
@@ -214,21 +214,19 @@
           <div
             ngxSlickItem
             *ngFor="let slide of slides; let i = index"
-            class="slide"
+            class="slide overflow-hidden"
           >
           <div class="row d-flex">
-            <div class="col flex-row">
-              <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;">
-                فتح باب التقدم لإختبارات
-                أبناؤنا في الخارج الدور الأول
-                2022 - 2023 م
+            <div class="col flex-column col-6">
+              <p class="text-start align-top text-black mx-3 mt-3" style="font-size: xx-large; min-width:40vw; max-width:60vw">
+                {{slide.p}}
               </p>
 
             </div>
-            <div class="col flex-row">
-              <img src="{{ slide.img }}" alt="" width="100%" />
+            <!--div class="col flex-row">
+              <img src="{{ slide.img }}" alt="" class="img-fluid rounded" style="height:40h"  />
             
-            </div>
+            </div-->
             <!---->
             <!--
             <p class="text-start text-warning mx-1 mb-5" style="transform: translate(-10px,-230px); font-size: x-large;">
@@ -249,8 +247,8 @@
 
 
       <section class="row d-flex">
-        <div class="col-md-3 col-sm-6 flex-column">
-          <svg xmlns="http://www.w3.org/2000/svg" width="90" height="92" fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16">
+        <div class="col-md-3 col-sm-6 col-xs-3 flex-column">
+          <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16">
             <path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z"/>
             <path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708z"/>
           </svg>
@@ -261,7 +259,7 @@
           <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
         </div>
   
-        <div class="col-md-3 col-sm-6 flex-column">
+        <div class="col-md-3 col-sm-6 col-xs-3 flex-column">
           <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
           </svg>
@@ -270,7 +268,7 @@
           <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
         </div>
   
-        <div class="col-md-3 col-sm-6 flex-column">
+        <div class="col-md-3 col-sm-6 col-xs-3 flex-column">
           <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-folder2-open" viewBox="0 0 16 16">
             <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v.64c.57.265.94.876.856 1.546l-.64 5.124A2.5 2.5 0 0 1 12.733 15H3.266a2.5 2.5 0 0 1-2.481-2.19l-.64-5.124A1.5 1.5 0 0 1 1 6.14V3.5zM2 6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5a.5.5 0 0 0-.5.5V6zm-.367 1a.5.5 0 0 0-.496.562l.64 5.124A1.5 1.5 0 0 0 3.266 14h9.468a1.5 1.5 0 0 0 1.489-1.314l.64-5.124A.5.5 0 0 0 14.367 7H1.633z"/>
           </svg>
@@ -280,7 +278,7 @@
           <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
         </div>
         
-        <div class="col-md-3 col-sm-6 flex-column">
+        <div class="col-md-3 col-sm-6 col-xs-3 flex-column">
           <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
             <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
           </svg>
@@ -292,9 +290,42 @@
         </div>
       
       </section>
-
-    
-    
+      <div class="container-fluid">
+      <section id="caroselsection2">
+        <h4 class="text-center text-warning py-2 my-2 rounded-1 mx-1 px-1 ">اخر الاخبار</h4>
+       
+         <ngx-slick-carousel
+           style="background: transparent"
+           class="carousel"
+           #slickModal="slick-carousel"
+           [config]="slide2Config"
+           (init)="slickInit2($event)"
+           (breakpoint)="breakpoint2($event)"
+           (afterChange)="afterChange2($event)"
+           (beforeChange)="beforeChange2($event)"
+         >
+          
+           <div
+             ngxSlickItem
+             *ngFor="let fetchedArticle of fetechedArticles; let i =index"
+             class="slide overflow-hidden " routerLink="/news/{{fetchedArticle.id}}"
+           >
+           <div class="col-sm-6 col-md-4 flex-column ">
+            <img src="{{fetchedArticle.imgurl}}" alt="" class="rounded" >
+               <p class="text-start align-top text-black mx-1 mt-5" style="" routerLink="/news/{{fetchedArticle.id}}">
+                 {{fetchedArticle.title}}
+               </p>
+           </div>
+           </div>
+         </ngx-slick-carousel>
+         <!--
+         <button (click)="addSlide()">Add</button>
+         <button (click)="removeSlide()">Remove</button>
+         <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+         <button (click)="slickModal.unslick()">unslick</button-->
+       </section>
+       </div>
+      
   </main>
 </div>
 

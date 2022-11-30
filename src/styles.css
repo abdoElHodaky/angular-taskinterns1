@@ -1,34 +1,70 @@
-/* Add application styles & imports to this file! */
-.slick-dots button {
-  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s;
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  font-family: sans-serif;
 }
-app-home .slick-dots {
+
+
+app-home #caroselsection .slick-dots{
   text-align: right;
+  transform: translateY(3vh);
+  
 }
-app-home .slick-dots li.slick-active button:before,
-app-home .slick-dots li button:before {
-  color: var(--bs-gray);
+
+.slick-dots button{
+  outline:none;
+  transition:all cubic-bezier(.17,.67,.83,.67) .7s;
+}
+app-home #caroselsection .slick-dots li.slick-active button:before,
+app-home #caroselsection .slick-dots li button:before {
+  color: var(--bs-light);
   opacity: 1;
   font-size: 16px;
 }
-app-home .slick-dots li.slick-active button {
+app-home #caroselsection .slick-dots li.slick-active button {
   border: 5px solid var(--bs-cyan);
   border-radius: 100%;
 }
-app-home .slick-dots li.slick-active button:before {
+app-home #caroselsection .slick-dots li.slick-active button:before {
   color: var(--bs-cyan);
 }
 
-app-news .slick-dots li.slick-active button:before,
-app-news .slick-dots li button:before {
-  color: var(--bs-gray);
+app-home #caroselsection .slick-dots li button {
+  color: transparent;
+  border: 2px solid darkgoldenrod;
+  border-radius: 100%;
+}
+
+
+
+
+
+
+app-home #caroselsection2 .slick-dots li.slick-active button:before,
+app-home #caroselsection2 .slick-dots li button:before {
+  color: grey;
   opacity: 1;
   font-size: 16px;
 }
-app-news .slick-dots li.slick-active button {
+app-home #caroselsection2 .slick-dots li.slick-active button {
   border: 5px solid var(--bs-warning);
   border-radius: 100%;
 }
-app-news .slick-dots li.slick-active button:before {
+app-home #caroselsection2 .slick-dots li.slick-active button:before {
   color: var(--bs-warning);
 }
+
+app-home #caroselsection2 .slick-slide {
+  margin: 0 10px;
+}
+app-home #caroselsection2 .slick-list {
+  margin: 0 -10px;
+}
+
+app-home #caroselsection2 p:hover{
+  cursor:pointer;
+}
+
+
+

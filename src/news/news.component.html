@@ -1,5 +1,5 @@
 <header>
-   <nav class="navbar navbar-expand-lg navbar-light bg-light rounded bg-white" aria-label="Eleventh navbar example">
+   <nav class="navbar navbar-expand-lg navbar-light bg-white rounded " aria-label="Eleventh navbar example">
       <div class="container-fluid">
         <a class="navbar-brand col-5" href="#">
         <img src="https://moe.gov.eg/wwwroot/images/logo.png" class="img-responsive">
@@ -175,8 +175,10 @@
       </div>
       </section>
     -->
-
-    <section id="caroselsection">
+    
+    <!--section class="caroselsection">
+     <h4 class="text-start text-warning py-2 my-2 rounded-1 mx-1 px-1 ">{{fetchedCat}}</h4>
+    
       <ngx-slick-carousel
         style="background: transparent"
         class="carousel"
@@ -187,51 +189,42 @@
         (afterChange)="afterChange($event)"
         (beforeChange)="beforeChange($event)"
       >
+       
         <div
           ngxSlickItem
-          *ngFor="let slide of slides; let i = index"
-          class="slide"
+          *ngFor="let fetchedArticle of fetechedArticles; let i =index"
+          class="slide overflow-hidden " routerLink="/news/{{fetchedArticle.id}}"
         >
-        <div class="row d-flex">
-          <div class="col-sm-6 col-md-4 flex-column">
-            <img src="{{slide.img}}" alt="" width="250px" height="250px">
-            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i+1}}">
-              شرح طريقه التسجيل
+        <div class="col-sm-6 col-md-4 flex-column ">
+         <img src="{{fetchedArticle.imgurl}}" alt="" class="rounded img-fluid" >
+            <p class="text-start align-top text-success mx-1 mt-5" style="" routerLink="/news/{{fetchedArticle.id}}">
+              {{fetchedArticle.title}}
             </p>
-
-          </div>
-          <div class="col-sm-6 col-md-4 flex-column">
-            <img src="{{slide.img}}" alt="" width="250px" height="250px">
-            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i+1}}">
-              شرح طريقه التسجيل
-            </p>
-
-          </div>
-          <div class="col-sm-6 col-md-4 flex-column">
-            <img src="{{slide.img}}" alt="" width="250px" height="250px">
-            <p class="text-start align-top text-success mx-1 mt-5" style="font-size: xx-large;" routerLink="/news/{{i+1}}">
-              شرح طريقه التسجيل
-            </p>
-
-          </div>
-          
-          <!---->
-          <!--
-          <p class="text-start text-warning mx-1 mb-5" style="transform: translate(-10px,-230px); font-size: x-large;">
-            {{ slide.p }}
-          </p>
-        -->
         </div>
-          
         </div>
       </ngx-slick-carousel>
-      <!--
+      
       <button (click)="addSlide()">Add</button>
       <button (click)="removeSlide()">Remove</button>
       <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-      <button (click)="slickModal.unslick()">unslick</button-->
-    </section>
+      <button (click)="slickModal.unslick()">unslick</button>
+    </section-->
+    <section class="container-fluid">
 
+      <div class="row d-flex">
+
+        <div class="col-sm-6 col-md-4 flex-column " *ngFor="let fetchedArticle of fetechedArticles; let i =index">
+         <img src="{{fetchedArticle.imgurl}}" alt="" class="rounded img-fluid" >
+            <p class="text-start align-top text-black mx-1 mt-5" style="" routerLink="/news/{{fetchedArticle.id}}">
+              {{fetchedArticle.title}}
+            </p>
+        </div>
+
+
+
+      </div>
+
+    </section>
 
   </div>
   

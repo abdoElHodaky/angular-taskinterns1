@@ -6,7 +6,9 @@
   }
   .nav-item a{
     color: var(--bs-white);
+    padding-right: 0.5rem;
     transition: all ease-in-out .5s;
+    
   }
   .nav-item a:active,.nav-item a:hover{
     color: white;
@@ -21,5 +23,55 @@
   position: relative;
   margin-bottom: 50px;
  }
-
+ .caroselsection,.caroselsection ngx-slick-carousel{
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+}
+ .caroselsection img{
+  min-width: 400px;
+  max-width: 40vw;
+  height: 54vh;
+  max-height: 55vh;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .7s;
+ }
+ .caroselsection .slide:hover{
+  cursor: pointer;
+ }
  
+ .caroselsection h4{
+  background-color: var(--bs-gray);
+}
+.caroselsection p{
+    font-size: medium;
+    min-width: 20vw;
+    max-width: 40vw;
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .7s;
+}
+@media screen and (orientation:portrait){
+  .caroselsection,.caroselsection ngx-slick-carousel{
+    max-height: 83vh;
+  }
+  .caroselsection img{
+    
+    max-width: none;
+    height: 30vh;
+    width: 30vw;
+  }
+  .caroselsection p, section.container-fluid p{
+    min-width: 19vw;
+    
+  }
+  section.container-fluid img{
+    height: 20vh;
+    width: 100vw;
+
+  }
+
+}
+
+@media screen and (orientation:landscape) {
+  section.container-fluid img{
+    height: 30vh;
+    width: 30vw;
+
+  } 
+}

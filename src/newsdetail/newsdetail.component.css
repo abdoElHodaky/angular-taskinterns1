@@ -5,6 +5,7 @@
   
 }
 .nav-item a{
+  padding-right: 0.5rem;
   color: black;
   transition: all ease-in-out .5s;
 }
@@ -12,4 +13,15 @@
   color: white;
   border-radius: 10%;
   background-color: var(--bs-cyan);
+}
+
+@media screen and (orientation:portrait) {
+  img{
+    max-height: 60vh;
+  }  
+}
+@media screen and (orientation:landscape) {
+  img{
+    max-height: 60vh;
+  }  
 }

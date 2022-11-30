@@ -26,8 +26,15 @@
 }
 */
 #caroselsection {
-  margin-bottom: 5rem;
-  background-color: var(--bs-light);
+  margin-bottom: 6rem;
+  /*background-color: var(--bs-light);*/
+  background-image: url(../assets/hugo-productive-work.png);
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .7s;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 46vh;
+    max-height: 50vh
 }
 ._navactive {
   color: white;
@@ -97,6 +104,7 @@ body .slick-next {
 }
 .nav-item a{
   color: black;
+  padding-right: 0.5rem;
   transition: all ease-in-out .5s;
 }
 .nav-item a:active,.nav-item a:hover{
@@ -105,13 +113,17 @@ body .slick-next {
   background-color: var(--bs-cyan);
 }
 
+@media screen and  (orientation:portrait){
+  #caroselsection{
+    max-height: 80vh;
+  }
+}
 
 
 
 
 
-
-
+/*
 .slick-dots li.slick-active button:before, .slick-dots li button:before {
     color: #FFF;
     opacity: 1;
@@ -126,4 +138,52 @@ body .slick-next {
 }
 .slick-dots li.slick-active button:before {
     color: transparent;
+}
+*/
+.caroselsection,.caroselsection ngx-slick-carousel , #caroselsection2,#caroselsection ngx-slick-carousel {
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+}
+#caroselsection2 img{
+  width: 400px;
+  max-width: 18vw;
+  height: 54vh;
+  max-height: 55vh;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .7s;
+ }
+ #caroselsection2 .slide:hover{
+  cursor: pointer;
+ }
+ 
+ #caroselsection2 h4{
+  background-color: var(--bs-gray);
+}
+#caroselsection2 p{
+    font-size: medium;
+    min-width: 16vw;
+    max-width: 40vw;
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .7s;
+}
+#caroselsection2 p:hover{
+  cursor: pointer;
+}
+@media screen and (orientation:portrait){
+  #caroselsection2,#caroselsection2 ngx-slick-carousel{
+    max-height: 83vh;
+  }
+  #caroselsection2 img{
+    
+    height: 30vh;
+    width: 30vw;
+    max-width: none;
+  }
+  #caroselsection2 p{
+    min-width: 20vw;
+    max-width: 30vw;
+    font-size: 0.69em;
+  }
+
+}
+
+section h2{
+  font-size: large;
 }
